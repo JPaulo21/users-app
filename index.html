@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(146, 211, 216);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .principal {
+            width: 30vw;
+            background-color: white;
+            margin: 10vh auto;
+            padding: 3vh 3vw;
+            box-sizing: border-box;
+            border-radius: 20px;
+            box-shadow: 4px 4px 8px rgb(83, 83, 83);
+        }
+
+        .tab {
+            padding: .5vh .5vw;
+            margin-bottom: .5vh;
+            background-color: white;
+            border: 0;
+            color: gray;
+            border-bottom: 2px gray solid;
+            font-size: medium;
+            font-weight: 600;
+        }
+
+        .tab:hover {
+            color: rgb(101, 206, 206);
+            border-color: rgb(101, 206, 206);
+            cursor: pointer;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1vh;
+        }
+
+        .input {
+            margin: 1.2vh auto;     
+        }
+
+        input {
+            display: flex;
+            outline: 0;
+            border: 0;
+            border-bottom: 1px solid gray;
+            padding: .5vh .5vw .3vh .3vw;  
+            font-size: medium; 
+            width: 100%;
+            margin-top: 1vh;
+        }
+
+        label {
+            color: rgb(73, 73, 73);
+        }
+
+        .btn{
+            margin-top: 3.5vh;
+            text-align: center;
+        }
+
+        .btn__cadastrar{
+            padding: 1.1vh 1.6vw;
+            background-color: rgb(255, 134, 87);
+            border: 0;
+            border-radius: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            font-size: medium;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn__cadastrar:hover {
+            background-color: rgb(255, 69, 63);
+            
+        }
+
+        .btn__cadastrar:focus {
+            background-color: rgb(255, 111, 95);
+            outline: 0;
+        }
+
+        .btn__cadastrar:active {
+            box-shadow: inset -4px -4px 6px rgb(170, 110, 89), inset 4px 4px 6px rgb(170, 110, 89);
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="principal">           
+                <button class="tab">Cadastrar</button>
+                <button class="tab">Autenticar</button>
+                <form action="">
+                    <div class="inputs">
+                        <div class="input">
+                            <label for="idUsername">Login: </label>
+                            <input type="text" name="username" id="idUsername">
+                        </div>
+                        <div class="input">
+                            <label for="idPassword">Password: </label>
+                            <input type="password" name="password" id="idPassword">
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button class="btn__cadastrar">Cadastrar</button>
+                    </div>
+                </form>           
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
