@@ -22,6 +22,7 @@ body{
 .nav {
     display: flex;  
     column-gap: .1vw;
+    margin-bottom: 1vw;
 }
 
 input[type="radio"] {
@@ -45,6 +46,16 @@ input[type="radio"]:checked + .tab {
     border-color: rgb(101, 206, 206);
     cursor: pointer;
     transition: color 0.2s, border-color 0.2s;
+}
+
+.error{
+    border-bottom-color: red;
+    background-color: #ff00001c;
+}
+
+.msgError{
+    font-size: small;
+    color: red;
 }
 
 /*******************************************/

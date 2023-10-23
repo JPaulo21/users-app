@@ -16,11 +16,23 @@ cadastrar.addEventListener('click', (e) => {
         },
 
         body: JSON.stringify(data)
-    })
-        .then((response) => {
-            //console.log(response.headers.get('location')); Obtendo
-            console.log(response.headers);
-        })
+    }).then((response) => {
+        //console.log(response.headers.get('location')); Obtendo Location do ResponseHeadears
+        if(response.status == 400){
+            const inputUsername = document.getElementById('idUsername');
+            inputUsername.classList.add('error');
+            return response.json();
+        }
+   
+    }).then((jsonData) => {
+        const [username, password] = jsonData;
+
+        const msgError = document.getElementById('msgErro');
+        msgError.classList.add('msgError');
+        msgError.innerHTML = username.msg;
+    }).catch((error) => {
+        
+    })    
         
 });
 
