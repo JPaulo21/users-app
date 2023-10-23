@@ -92,7 +92,7 @@ label {
 
 .btn__cadastrar{
     padding: 1.1vh 1.6vw;
-    background-color: rgb(255, 153, 94);
+    background-color: rgb(249, 171, 125);
     border: 0;
     border-radius: 15px;
     font-family: 'Roboto', sans-serif;
@@ -103,7 +103,7 @@ label {
 }
 
 .btn__cadastrar:hover {
-    background-color: rgb(255, 137, 41);
+    background-color: rgb(252, 128, 26);
     
 }
 
