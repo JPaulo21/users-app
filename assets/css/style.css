@@ -19,7 +19,7 @@ body{
     box-shadow: 4px 4px 8px rgb(83, 83, 83);
 }
 
-.nav {
+.navs {
     display: flex;  
     column-gap: .1vw;
     margin-bottom: 1vw;
@@ -48,14 +48,40 @@ input[type="radio"]:checked + .tab {
     transition: color 0.2s, border-color 0.2s;
 }
 
+input {
+    display: flex;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid gray;
+    padding: .5vh .5vw .3vh .3vw;  
+    font-size: medium; 
+    width: 100%;
+    margin-top: 1vh;
+}
+/*******************************************/
 .error{
-    border-bottom-color: red;
-    background-color: #ff00001c;
+    color: white;
+    background-color: #ff0000;
+    padding: 1vh 2vw;
+    border-radius: 15px;
+    opacity: 0.8;
 }
 
-.msgError{
-    font-size: small;
-    color: red;
+.msg-usuario{
+    margin: 2vh auto 0;
+    width: 25vw;
+}
+
+.success{
+    background-color: rgb(50, 255, 47);
+    color: #ffffff;
+    padding: 1vh 2vw;
+    border-radius: 15px;
+    opacity: 0.8;
+}
+
+.txt-error{
+    color: #ff0000;
 }
 
 /*******************************************/
@@ -70,17 +96,6 @@ input[type="radio"]:checked + .tab {
     margin: 1.2vh auto;     
 }
 
-input {
-    display: flex;
-    outline: 0;
-    border: 0;
-    border-bottom: 1px solid gray;
-    padding: .5vh .5vw .3vh .3vw;  
-    font-size: medium; 
-    width: 100%;
-    margin-top: 1vh;
-}
-
 label {
     color: rgb(73, 73, 73);
 }
@@ -90,7 +105,7 @@ label {
     text-align: center;
 }
 
-.btn__cadastrar{
+.btn__enviar{
     padding: 1.1vh 1.6vw;
     background-color: rgb(249, 171, 125);
     border: 0;
@@ -102,16 +117,16 @@ label {
     cursor: pointer;
 }
 
-.btn__cadastrar:hover {
+.btn__enviar:hover {
     background-color: rgb(252, 128, 26);
     
 }
 
-.btn__cadastrar:focus {
+.btn__enviar:focus {
     background-color: rgb(255, 111, 95);
     outline: 0;
 }
 
-.btn__cadastrar:active {
+.btn__enviar:active {
     box-shadow: inset -4px -4px 6px rgb(170, 110, 89), inset 4px 4px 6px rgb(170, 110, 89);
 }
