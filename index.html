@@ -6,42 +6,41 @@
     <title>Formulário</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/main.js" defer></script>
+    <script type="module" src="assets/js/main.js" defer></script>
 </head>
 <body>
     <main>
         <section>
-            <div class="principal">           
-                <!-- <button class="tab">Cadastrar</button> -->
-                <!-- <button class="tab">Autenticar</button> -->
-
-                <div class="nav">
-                    <div>
-                        <input type="radio" name="navs" id="idCadastrar" class="radio" checked>
-                        <label for="idCadastrar" class="tab">Cadastrar</label>
+            <div class="principal"> 
+                <div class="navs">
+                    <div class="nav">
+                        <input type="radio" name="itemNav" id="tabCadastrar" class="tab users" value="cadastrar" checked>
+                        <label for="tabCadastrar" class="tab cadastar">Cadastrar</label>
                     </div>
-                    <div>
-                        <input type="radio" name="navs" id="idAutenticar" class="radio">
-                        <label for="idAutenticar" class="tab">Autenticar</label>
+                    <div class="nav">
+                        <input type="radio" name="itemNav" id="tabAutenticar" class="tab auth" value="autenticar">
+                        <label for="tabAutenticar" class="tab autenticar" >Autenticar</label>
                     </div>
                 </div>
-                <form action="">
+                <form data-form-user>                   
                     <div class="inputs">
                         <div class="input">
                             <label for="idUsername">Login: </label>
                             <input type="text" name="username" id="idUsername" class="field">
-                            <div id="msgErro"></div>
+                            <div id="msg-username" class="msg msg-username"></div>
                         </div>
                         <div class="input">
                             <label for="idPassword">Password: </label>
                             <input type="password" name="password" id="idPassword">
+                            <div id="msg-password" class="msg msg-password"></div>
                         </div>
                     </div>
                     <div class="btn">
-                        <button class="btn__cadastrar">Cadastrar</button>
+                        <button id="submit" class="btn__enviar">Enviar</button>
                     </div>
                 </form>           
             </div>
+            <div id="msg-usuario" class="msg msg-usuario"></div>
         </section>
     </main>
 </body>
